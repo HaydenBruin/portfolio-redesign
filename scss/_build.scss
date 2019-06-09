@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.dash {
+    width: 36px;
+    height: 4px;
+    background-color: #EF4D4D;
+    margin-bottom: 15px;
+
+    @media all and (max-width: 767px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@import "hero.scss";
+@import "projects.scss";
+@import "blog.scss";

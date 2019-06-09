@@ -1,0 +1,245 @@
+.hero {
+    background: #41228e url("/static/images/hero-shape.png") no-repeat;
+    background-size: 100%;
+    background-position: bottom center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @media all and (max-width: 767px) {
+        height: auto;
+        display: block;
+        padding: 100px 0;
+    }
+
+    .content {
+        width: 1140px;
+        
+        .title {
+            margin: 0;
+            padding: 0 30px;
+            color: #FFF;
+            font-size: 64px;
+            font-weight: bold;
+
+            @media all and (max-width: 767px) {
+                font-size: 28px;
+            }
+        }
+    }
+
+    .down {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+
+        @media all and (max-width: 767px) {
+            display: none;
+        }
+
+        .previouswork {
+            display: inline-block;
+            animation-name: scale;
+            animation-duration: 2s;
+            cursor: pointer;
+            transition: all 1s ease;
+            transform: scale(1.1) rotate(-15deg);
+
+            @keyframes scale {
+                from {
+                    transform: scale(1) rotate(0deg);
+                }
+                to {
+                    transform: scale(1.1) rotate(-15deg);
+                }
+            }
+
+            .text {
+                color: #F54EA2;
+                margin-bottom: 15px;
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+            svg {
+                fill: #F54EA2;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+
+    img.leaf-1 {
+        position: absolute;
+        top: 150px;
+        left: 0px;
+        
+        animation-name: leafone;
+        animation-duration: 1s;
+
+        @keyframes leafone {
+            from {
+                top: 0px;
+            }
+        }
+    }
+    img.leaf-2 {
+        position: absolute;
+        top: 150px;
+        right: -150px;
+
+        
+        animation-name: leaftwo;
+        animation-duration: 2s;
+
+        @keyframes leaftwo {
+            from {
+                top: 0px;
+                right: 0;
+            }
+        }
+    }
+    img.leaf-3 {
+        position: absolute;
+        bottom: 150px;
+        right: 0px;
+
+        animation-name: leafthree;
+        animation-duration: 1.5s;
+
+        @keyframes leafthree {
+            from {
+                bottom: 0;
+            }
+        }
+    }
+    img.leaf-4 {
+        position: absolute;
+        bottom: -40px;
+        left: 200px;
+
+        animation-name: leaffour;
+        animation-duration: 1.5s;
+
+        @keyframes leaffour {
+            from {
+                bottom: -100px;
+            }
+        }
+    }
+    img.leaf-5 {
+        position: absolute;
+        bottom: 160px;
+        right: 600px;
+
+        animation-name: leaffive;
+        animation-duration: 1s;
+
+        @keyframes leaffive {
+            from {
+                bottom: 0;
+            }
+        }
+    }
+    img.leaf-6 {
+        position: absolute;
+        top: 200px;
+        left: 550px;
+        
+        animation-name: leafsix;
+        animation-duration: 1.5s;
+
+        @keyframes leafsix {
+            from {
+                top: 0;
+            }
+        }
+    }
+
+    img.dots-1 {
+        position: absolute;
+        top: 190px;
+        right: 650px;
+        
+        animation-name: dotsone;
+        animation-duration: 1.5s;
+
+        @keyframes dotsone {
+            from {
+                right: 0;
+            }
+        }
+    }
+    img.dots-2 {
+        position: absolute;
+        bottom: 120px;
+        left: 460px;
+        
+        animation-name: dotstwo;
+        animation-duration: 1.5s;
+
+        @keyframes dotstwo {
+            from {
+                left: 0;
+            }
+        }
+    }
+
+    @media all and (min-width: 1024px) and (max-width: 1400px) {
+        img.dots-1,
+        img.dots-2,
+        img.leaf-1, 
+        img.leaf-5 {
+            display: none;
+        }
+    }
+    @media all and (min-width: 768px) and (max-width: 1023px) {
+        img.leaf-1,
+        img.leaf-2,
+        img.leaf-6 {
+            display: none;
+        }
+        
+        img.dots-1 {
+            left: 30px;
+            right: 0;
+            top: 30px;
+        }
+        img.leaf-3 {
+            top: 150px;
+            bottom: 0;
+            right: 0;
+        }
+        img.leaf-5 {
+            top: 20px;
+            right: 15px;
+        }
+        img.dots-2 {
+            bottom: 50px;
+            right: 40px;
+            left: auto;
+        }
+    }
+    @media all and (max-width: 767px) {
+        img.dots-2,
+        img.leaf-1,
+        img.leaf-2,
+        img.leaf-3 {
+            display: none;
+        }
+        img.leaf-5 {
+            top: 20px;
+            right: 15px;
+        }
+        img.dots-1 {
+            left: 30px;
+            right: 0;
+            top: 30px;
+        }
+    }
+
+}
