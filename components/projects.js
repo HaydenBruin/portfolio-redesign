@@ -31,7 +31,7 @@ export default class Projects extends Component {
         "companylogo": "/static/projects/dotperformance-logo.png",
         "media": "/static/projects/futureblossom.jpg",
         "medialarge": "/static/projects/futureblossom-large.jpg",
-        "date": "12nd Aug 2015",
+        "date": "12th Aug 2015",
         "description": [
             "<h2>Building a safer online dating experience one tap at a time.</h2>",
             "<h3>At a Glance</h3>",
@@ -65,7 +65,7 @@ export default class Projects extends Component {
         "companylogo": "/static/projects/dotperformance-logo.png",
         "media": "/static/projects/hairandbeauty.jpg",
         "medialarge": "/static/projects/hairandbeauty-large.jpg",
-        "date": "12nd Aug 2015",
+        "date": "12th Aug 2015",
         "description": [
             "<h2>An ecommerce website for a hair & beauty wholesaler on the IOM</h2>"
         ],
@@ -85,7 +85,7 @@ export default class Projects extends Component {
         return (
             <div className="projects">
                 <h2>Three projects I'm proud of...</h2>
-                <div className="projects-list">
+                <div className="items-list">
                     {this.projects && this.projects.map((project, index) => {
                         return <Project key={index} project={project} />
                     })}
@@ -98,11 +98,11 @@ export default class Projects extends Component {
 const Project = (props) => {
     const project = props.project;
     return (
-        <div className="projects__project">
-            <div className="projects__project--imgwrapper">
+        <div className="items__item">
+            <div className="items__item--imgwrapper">
                 <img src={project.media} alt={project.title} />
             </div>
-            <div className="projects__project--content">
+            <div className="items__item--content">
                 <div className="date">{project.date}</div>
                 <div className="dash"></div>
                 <div className="title">{project.title}</div>
